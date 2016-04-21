@@ -13,6 +13,7 @@ public class MainApp {
 	public static int counterMain = 0;
 	public static int x = 0;
 	public static int y = 0;
+	public static int userMove = '0';
 
 	public static void main(String[] args) {
 		// set class variables
@@ -25,7 +26,7 @@ public class MainApp {
 		// variables
 		int gameChoice = '0';
 		int gameArena = 0;
-		int userMove = '0';
+		
 		
 
 		// title
@@ -52,15 +53,7 @@ public class MainApp {
 					System.out.println("Pick your move: ");
 					userMove = Validation.getPlayerNumberInRange(1, 9);
 
-					// check if spot available method
-					for (int i = 0; i < childArray.length; i++ ){
-						for (int j = 0; j < childArray.length; j++){
-							if (childArray[i][j] == userMove){
-								x = i;
-								y = j;
-							}
-						}//end j for loop
-					}//end i for loop
+					
 					while (childArray[x][y]!=' '){
 						System.out.println("You must pick a open spot.");
 						System.out.println("Pick your move: ");
