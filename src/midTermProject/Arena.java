@@ -23,11 +23,24 @@ public class Arena {
      System.out.print(" " + SmallArena[2][1] + " |" + " " + SmallArena[2][2] + " |" + " " + SmallArena[2][3] + "\n");}
 
  
- }
+ 
 	
+	
+	
+	 
+ 		public static void resetArena(){
+ 			for(char[] rows: MainApp.mainBoardArray	)
+ 				Arrays.fill(rows,' ');
+}
+
+
+ 		public static void resetBoard() {
+ 			for(char[]rows:MainApp.childArray )
+ 				Arrays.fill(rows, ' ');
+ 			}
+					}
 	
 
-        
     
 
  
