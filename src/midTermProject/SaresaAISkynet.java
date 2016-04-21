@@ -16,8 +16,8 @@ public class SaresaAISkynet {
 		temp= ((MainApp.childArray[0][0])=='O' && (MainApp.childArray[2][0]) =='O') ? '4':'0';
 		temp= ((MainApp.childArray[0][0])=='O' && (MainApp.childArray[1][1]) =='O') ? '9':'0';
 		temp= ((MainApp.childArray[0][0])=='O' && (MainApp.childArray[2][2]) =='O') ? '5':'0';
-		temp= ((MainApp.childArray[0][3])=='O' && (MainApp.childArray[1][1]) =='O') ? '7':'0';
-		temp= ((MainApp.childArray[0][3])=='O' && (MainApp.childArray[2][0]) =='O') ? '5':'0';
+		temp= ((MainApp.childArray[0][2])=='O' && (MainApp.childArray[1][1]) =='O') ? '7':'0';
+		temp= ((MainApp.childArray[0][2])=='O' && (MainApp.childArray[2][0]) =='O') ? '5':'0';
 		temp= ((MainApp.childArray[0][1])=='O' && (MainApp.childArray[1][1]) =='O') ? '8':'0';
 		temp= ((MainApp.childArray[1][1])=='O' && (MainApp.childArray[2][1]) =='O') ? '2':'0';
 		temp= ((MainApp.childArray[0][1])=='O' && (MainApp.childArray[2][1]) =='O') ? '5':'0';
@@ -38,8 +38,8 @@ public class SaresaAISkynet {
 		temp= ((MainApp.childArray[0][0])=='X' && (MainApp.childArray[2][0]) =='X') ? '4':'0';
 		temp= ((MainApp.childArray[0][0])=='X' && (MainApp.childArray[1][1]) =='X') ? '9':'0';
 		temp= ((MainApp.childArray[0][0])=='X' && (MainApp.childArray[2][2]) =='X') ? '5':'0';
-		temp= ((MainApp.childArray[0][3])=='X' && (MainApp.childArray[1][1]) =='X') ? '7':'0';
-		temp= ((MainApp.childArray[0][3])=='X' && (MainApp.childArray[2][0]) =='X') ? '5':'0';
+		temp= ((MainApp.childArray[0][2])=='X' && (MainApp.childArray[1][1]) =='X') ? '7':'0';
+		temp= ((MainApp.childArray[0][2])=='X' && (MainApp.childArray[2][0]) =='X') ? '5':'0';
 		temp= ((MainApp.childArray[0][1])=='X' && (MainApp.childArray[1][1]) =='X') ? '8':'0';
 		temp= ((MainApp.childArray[1][1])=='X' && (MainApp.childArray[2][1]) =='X') ? '2':'0';
 		temp= ((MainApp.childArray[0][1])=='X' && (MainApp.childArray[2][1]) =='X') ? '5':'0';

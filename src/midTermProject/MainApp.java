@@ -55,13 +55,13 @@ public class MainApp {
 					userMove = Validation.getPlayerNumberInRange(1, 9);
 
 					
-					while (childArray[x][y]!=' '){
-						System.out.println("You must pick a open spot.");
-						System.out.println("Pick your move: ");
-						userMove = Validation.getPlayerNumberInRange(1, 9);
-					}
+//					while (childArray[x][y]!=' '){
+//						System.out.println("You must pick a open spot.");
+//						System.out.println("Pick your move: ");
+//						userMove = Validation.getPlayerNumberInRange(1, 9);
+//					}
 					// mark spot
-					childArray[x][y] = 'X';
+					//childArray[x][y] = 'X';
 					
 					//print board
 					Arena.printsSmallArena();
@@ -75,6 +75,8 @@ public class MainApp {
 					while (player == 'O') {
 						s1.getPCmove();
 					}
+					//print board
+					Arena.printsSmallArena();
 					// increase counter
 					counterChild++;
 					// check for win
