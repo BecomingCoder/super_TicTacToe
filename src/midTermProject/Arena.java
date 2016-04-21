@@ -21,6 +21,7 @@ public class Arena {
      System.out.println("---|---|---");
      System.out.print(" " + SmallArena[2][1] + " |" + " " + SmallArena[2][2] + " |" + " " + SmallArena[2][3] + "\n");}
 
+ 
  }
 	
 	
