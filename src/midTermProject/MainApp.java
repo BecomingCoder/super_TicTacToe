@@ -64,7 +64,7 @@ public class MainApp {
 					childArray[x][y] = 'X';
 					
 					//print board
-					Arena.printsSmallArena(childArray);
+					Arena.printsSmallArena();
 					// check for win
 					GregAllDayEveryday.checkWinChild();
 					// increase counter
