@@ -2,7 +2,8 @@ package midTermProject;
 
 public class GregAllDayEveryday {
 
-	public static String player;
+	
+	
 	
 	//Check for win
 	public static boolean checkWin() {
@@ -16,23 +17,23 @@ public class GregAllDayEveryday {
 	
     public static boolean winChecker(){
         //check horizontal
-        if(childArray[0][0] == player && childArray[0][1] == player && childArray[0][2] == player)
+        if(MainApp.childArray[0][0] == MainApp.player && MainApp.childArray[0][1] == player && MainApp.childArray[0][2] == player)
             return true;
-        if(childArray[1][0] == player && childArray[1][1] == player && childArray[1][2] == player)
+        if(MainApp.childArray[1][0] == player && MainApp.childArray[1][1] == player && MainApp.childArray[1][2] == player)
             return true;
-        if(childArray[2][0] == player && childArray[2][1] == player && childArray[2][2] == player)
+        if(MainApp.childArray[2][0] == player && MainApp.childArray[2][1] == player && MainApp.childArray[2][2] == player)
             return true;
         //check vertical
-        if(childArray[0][0] == player && childArray[1][0] == player && childArray[2][0] == player)
+        if(MainApp.childArray[0][0] == player && MainApp.childArray[1][0] == player && MainApp.childArray[2][0] == player)
             return true;
-        if(childArray[0][1] == player && childArray[1][1] == player && childArray[2][1] == player)
+        if(MainApp.childArray[0][1] == player && MainApp.childArray[1][1] == player && MainApp.childArray[2][1] == player)
             return true;
-        if(childArray[0][2] == player && childArray[1][2] == player && childArray[2][2] == player)
+        if(MainApp.childArray[0][2] == player && MainApp.childArray[1][2] == player && MainApp.childArray[2][2] == player)
             return true;
         //check diagonal
-        if(childArray[0][0] == player && childArray[1][1] == player && childArray[2][2] == player)
+        if(MainApp.childArray[0][0] == player && MainApp.childArray[1][1] == player && MainApp.childArray[2][2] == player)
             return true;
-        if (childArray[0][2] == player && childArray[1][1] == player && childArray[2][0] == player)
+        if (MainApp.childArray[0][2] == player && MainApp.childArray[1][1] == player && MainApp.childArray[2][0] == player)
             return true;
         return false;
 
