@@ -61,7 +61,7 @@ public class MainApp {
 //						userMove = Validation.getPlayerNumberInRange(1, 9);
 //					}
 					// mark spot
-					//childArray[x][y] = 'X';
+					childArray[x][y] = 'X';
 					
 					//print board
 					Arena.printsSmallArena();
@@ -71,6 +71,7 @@ public class MainApp {
 					counterChild++;
 					// change player to playerO
 					//player = 'O';
+					System.out.println("My Turn!");
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O') {
 						s1.getPCmove();
