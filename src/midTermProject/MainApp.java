@@ -11,6 +11,8 @@ public class MainApp {
 	public static boolean play = true;
 	public static int counterChild = 0;
 	public static int counterMain = 0;
+	public static int x = 0;
+	public static int y = 0;
 
 	public static void main(String[] args) {
 		// set class variables
@@ -40,20 +42,32 @@ public class MainApp {
 		case 1: // vs PC player
 
 			// while loop for main board
-			while (counterMain <= 9) {
+			while (play) {
 				// pick board to play on
 				System.out.println("Choose your arena");
 				gameArena = Validation.getValidNumberInRange(1, 9);
 						// while loop for child game
-				while (counterChild <= 9) {
+				while (play) {
 					// player picks move
 					System.out.println("Pick your move: ");
 					userMove = Validation.getPlayerNumberInRange(1, 9);
 
 					// check if spot available method
-					
+					for (int i = 0; i < childArray.length; i++ ){
+						for (int j = 0; j < childArray.length; j++){
+							if (childArray[i][j] == userMove){
+								x = i;
+								y = j;
+							}
+						}//end j for loop
+					}//end i for loop
+					while (childArray[x][y]!=' '){
+						System.out.println("You must pick a open spot.");
+						System.out.println("Pick your move: ");
+						userMove = Validation.getPlayerNumberInRange(1, 9);
+					}
 					// mark spot
-
+					childArray[x][y] = 'X';
 					// check for win
 					GregAllDayEveryday.checkWin();
 					// increase counter
