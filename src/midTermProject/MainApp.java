@@ -7,7 +7,7 @@ public class MainApp {
 	public static char[][] childArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 	static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
-
+	public static char player = 'X';
 	
 	public static void main(String[] args) {
 		// set class variables
@@ -24,7 +24,6 @@ public class MainApp {
 		int userMove = 0;
 		int counterChild = 0;
 		int counterMain = 0;
-		String player;
 
 		// title
 		System.out.println("Welcome to Super Tic Tac Toe!");
@@ -62,8 +61,9 @@ public class MainApp {
 					// change player to playerO
 
 					// get PC move +++++ put while loop that runs while PlayerO
+					while (player == 'O'){
 					s1.getPCmove();
-
+					}
 					// check for win
 
 					// increase counter
