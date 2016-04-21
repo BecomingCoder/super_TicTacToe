@@ -5,22 +5,22 @@ import java.util.*;
 
 public class Arena {
 
-	public static void printsArena(char[][] Arena) {
+	public static void printsArena() {
         
-        System.out.print(" " + Arena[0][1] + " |" + " " + Arena[0][2] + " |" + " " + Arena[0][3] + "\n");
+        System.out.print(" " + MainApp.mainBoardArray[0][1] + " |" + " " + MainApp.mainBoardArray[0][2] + " |" + " " + MainApp.mainBoardArray[0][3] + "\n");
         System.out.println("---|---|---");
-        System.out.print(" " + Arena[1][1] + " |" + " " + Arena[1][2] + " |" + " " + Arena[1][3] + "\n");
+        System.out.print(" " + MainApp.mainBoardArray[1][1] + " |" + " " + MainApp.mainBoardArray[1][2] + " |" + " " + MainApp.mainBoardArray[1][3] + "\n");
         System.out.println("---|---|---");
-        System.out.print(" " + Arena[2][1] + " |" + " " + Arena[2][2] + " |" + " " + Arena[2][3] + "\n");}
+        System.out.print(" " + MainApp.mainBoardArray[2][1] + " |" + " " + MainApp.mainBoardArray[2][2] + " |" + " " + MainApp.mainBoardArray[2][3] + "\n");}
 
 
- public static void printsSmallArena(char[][] SmallArena){
+ public static void printsSmallArena(){
 	 
-	 System.out.print(" " + SmallArena[0][1] + " |" + " " + SmallArena[0][2] + " |" + " " + SmallArena[0][3] + "\n");
+	 System.out.print(" " + MainApp.childArray[0][1] + " |" + " " + MainApp.childArray[0][2] + " |" + " " + MainApp.childArray[0][3] + "\n");
      System.out.println("---|---|---");
-     System.out.print(" " + SmallArena[1][1] + " |" + " " + SmallArena[1][2] + " |" + " " + SmallArena[1][3] + "\n");
+     System.out.print(" " + MainApp.childArray[1][1] + " |" + " " + MainApp.childArray[1][2] + " |" + " " + MainApp.childArray[1][3] + "\n");
      System.out.println("---|---|---");
-     System.out.print(" " + SmallArena[2][1] + " |" + " " + SmallArena[2][2] + " |" + " " + SmallArena[2][3] + "\n");}
+     System.out.print(" " + MainApp.childArray[2][1] + " |" + " " + MainApp.childArray[2][2] + " |" + " " + MainApp.childArray[2][3] + "\n");}
 
  
  
