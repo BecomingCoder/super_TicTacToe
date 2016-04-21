@@ -21,7 +21,8 @@ public class GregAllDayEveryday {
 		while(MainApp.childArray[MainApp.x][MainApp.y]!= ' ') {
 			System.out.println("This space is taken.....try again!");
 			MainApp.userMove = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine(); }
+			
 		
 		MainApp.childArray[MainApp.x][MainApp.y] = MainApp.player;
 		//Check for win
@@ -40,10 +41,10 @@ public class GregAllDayEveryday {
         //Check for draw by using a move counter and the max number of moves
         if (MainApp.counterChild >= 9){
             System.out.println("You both suck");
-            break;
+            
         }
         }
-		}
+		
 		
 	
 	//Check for win
