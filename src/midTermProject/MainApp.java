@@ -9,6 +9,8 @@ public class MainApp {
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 	public static char player = 'X';
 	public static boolean play = true;
+	public static int counterChild = 0;
+	public static int counterMain = 0;
 
 	public static void main(String[] args) {
 		// set class variables
@@ -22,8 +24,7 @@ public class MainApp {
 		int gameChoice = '0';
 		int gameArena = 0;
 		int userMove = '0';
-		int counterChild = 0;
-		int counterMain = 0;
+		
 
 		// title
 		System.out.println("Welcome to Super Tic Tac Toe!");
