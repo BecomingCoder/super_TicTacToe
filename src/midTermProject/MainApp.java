@@ -14,6 +14,8 @@ public class MainApp {
 	public static int x = 0;
 	public static int y = 0;
 	public static int userMove = '0';
+	public static int gameChoice = '0';
+	public static int gameArena = 0;
 
 	public static void main(String[] args) {
 		// set class variables
@@ -24,8 +26,7 @@ public class MainApp {
 		Scanner input = new Scanner(System.in);
 
 		// variables
-		int gameChoice = '0';
-		int gameArena = 0;
+		
 		
 		
 
@@ -69,7 +70,7 @@ public class MainApp {
 					// increase counter
 					counterChild++;
 					// change player to playerO
-					player = 'O';
+					//player = 'O';
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O') {
 						s1.getPCmove();
