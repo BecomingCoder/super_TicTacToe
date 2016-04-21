@@ -1,8 +1,10 @@
 package midTermProject;
 
+import java.util.*;
+
 public class GregAllDayEveryday {
 
-	
+	public static Scanner sc = new Scanner(System.in);
 	
 	//Check for win
 	public static void checkWinChild() {
@@ -16,8 +18,10 @@ public class GregAllDayEveryday {
 			}//end j for loop
 		}//end i for loop
 		
-		while(MainApp.childArray[MainApp.x][MainApp.y] == 'X' || MainApp.childArray[MainApp.x][MainApp.y] == 'O') {
+		while(MainApp.childArray[MainApp.x][MainApp.y]!= ' ') {
 			System.out.println("This space is taken.....try again!");
+			MainApp.userMove = sc.nextInt();
+			sc.nextLine();
 		
 		MainApp.childArray[MainApp.x][MainApp.y] = MainApp.player;
 		//Check for win
