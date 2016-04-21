@@ -31,7 +31,6 @@ public class SaresaAISkynet {
 		temp= ((childArray[1][0])=='X' && (childArray[1][1]) =='X') ? '6':'0';
 		temp= ((childArray[2][0])=='X' && (childArray[1][1]) =='X') ? '9':'0';
 		temp= ((childArray[0][1])=='X' && (childArray[0][2]) =='X') ? '1':'0';
-		
 		temp= ((childArray[1][1])=='X' && (childArray[1][2]) =='X') ? '4':'0';
 		temp= ((childArray[2][1])=='X' && (childArray[2][2]) =='X') ? '7':'0';
 		temp= ((childArray[0][0])=='X' && (childArray[1][0]) =='X') ? '7':'0';
@@ -56,8 +55,9 @@ public class SaresaAISkynet {
 	}
 	
 	public char getPCmoveTemp(){
-		temp= (findPossibleWin()!='0') ? temp:'0';
-		temp= (findPossibleBlock()!='0') ? temp:'0';
+		temp= findPossibleWin();
+		if (temp=='0')
+			temp= findPossibleBlock();		
 		if (temp=='0')
 			temp=getRandomMove();
 		return temp;
@@ -66,7 +66,7 @@ public class SaresaAISkynet {
 	public void getPCmove (){
 		//moves
 		getPCmoveTemp();
-		if (temp ==1 && childArray[0][0] == ' ' ){childArray[0][0]= 'O';}
+		if (temp ==1 && childArray[0][0] == ' ' ){childArray[0][0]= 'O';}//add change player method to each
 		if (temp ==2 && childArray[0][1] == ' ' ){childArray[0][1]= 'O';}
 		if (temp ==3 && childArray[0][2] == ' ' ){childArray[0][2]= 'O';}
 		if (temp ==4 && childArray[1][0] == ' ' ){childArray[1][0]= 'O';}

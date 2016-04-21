@@ -3,16 +3,10 @@ package midTermProject;
 import java.util.Scanner;
 
 public class MainApp {
-<<<<<<< HEAD
 	public static char[][] childArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
-	public static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+	static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 
-=======
-	public static char [][] childArray = { {' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
-	static int [][] positionArray = { {1,2,3},{4,5,6},{7,8,9}};
-	static char [][] mainBoardArray = { {' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
->>>>>>> ece2c3565cf1aae58330f3b059b0ea2b088891ac
 	public static void main(String[] args) {
 		// set class variables
 		Validation v1 = new Validation();
@@ -35,23 +29,12 @@ public class MainApp {
 
 		// choose game play type
 		System.out.print("Enter 1. To battle me! or 2. For 2 player: ");
-<<<<<<< HEAD
 		gameChoice = v1.getValidNumberInRange(1, 2);
 
 		// switch for game type choice
 		switch (gameChoice) {
 
 		case 1: // vs PC player
-=======
-		gameChoice = v1.getValidNumberInRange(1,2);
-		
-		
-		
-		//switch for game type choice 
-		switch(gameChoice){
-		
-		case 1: //vs PC player
->>>>>>> ece2c3565cf1aae58330f3b059b0ea2b088891ac
 			
 			//while loop for main board
 			while (counterMain <= 9) {
