@@ -61,8 +61,11 @@ public class MainApp {
 					}
 					// mark spot
 					childArray[x][y] = 'X';
+					
+					//print board
+					Arena.printsSmallArena(childArray);
 					// check for win
-					GregAllDayEveryday.checkWin();
+					GregAllDayEveryday.checkWinChild();
 					// increase counter
 					counterChild++;
 					// change player to playerO
@@ -71,10 +74,11 @@ public class MainApp {
 					while (player == 'O') {
 						s1.getPCmove();
 					}
-					// check for win
-					GregAllDayEveryday.checkWin();
 					// increase counter
 					counterChild++;
+					// check for win
+					GregAllDayEveryday.checkWinChild();
+
 				} // end countChild while
 				counterMain++;
 			} // end countMain while
@@ -95,11 +99,11 @@ public class MainApp {
 			// mark spot
 
 			// check for win
-			GregAllDayEveryday.checkWin();
+			GregAllDayEveryday.checkWinChild();
 			// increase counter
 			counterChild++;
 			// change player to playerO
-			player = 'O';
+			//player = 'O';
 			// pick your move
 			System.out.println("Pick your move: ");
 			userMove = Validation.getPlayerNumberInRange(1, 9);
@@ -108,7 +112,7 @@ public class MainApp {
 			// mark spot
 
 			// check for win
-			GregAllDayEveryday.checkWin();
+			GregAllDayEveryday.checkWinChild();
 			// increase counter
 			counterChild++;
 			// change player to playerO
