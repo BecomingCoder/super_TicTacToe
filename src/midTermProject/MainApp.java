@@ -11,7 +11,6 @@ public class MainApp {
 	
 	public static void main(String[] args) {
 		// set class variables
-		Validation v1 = new Validation();
 		Arena a1 = new Arena();
 		SaresaAISkynet s1 = new SaresaAISkynet();
 
@@ -31,7 +30,7 @@ public class MainApp {
 		// choose game play type
 		System.out.print("Enter 1. To battle me! or 2. For 2 player: ");
 
-		gameChoice = v1.getValidNumberInRange(1, 2);
+		gameChoice = Validation.getValidNumberInRange(1, 2);
 
 		// switch for game type choice
 		switch (gameChoice) {
@@ -43,23 +42,23 @@ public class MainApp {
 			while (counterMain <= 9) {
 				// pick board to play on
 				System.out.println("Choose your arena");
-				gameArena = v1.getPlayerNumberInRange(1, 9);
+				gameArena = Validation.getPlayerNumberInRange(1, 9);
 				//while loop for child game
 				while (counterChild <= 9) {
 					// player picks move
 					System.out.println("Pick your move: ");
-					userMove = v1.getPlayerNumberInRange(1, 9);
+					userMove = Validation.getPlayerNumberInRange(1, 9);
 
 					// check if spot available method
-
+					
 					// mark spot
 
 					// check for win
-
+					
 					// increase counter
-
+					counterChild++;
 					// change player to playerO
-
+					player = 'O';
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O'){
 					s1.getPCmove();
@@ -67,6 +66,7 @@ public class MainApp {
 					// check for win
 
 					// increase counter
+					counterChild++;
 				} // end countChild while
 				counterMain++;
 			} // end countMain while
@@ -77,11 +77,11 @@ public class MainApp {
 			System.out.println("Player X goes first"); 
 			// pick board to play on
 			System.out.println("Choose your arena");
-			gameArena = v1.getPlayerNumberInRange(1, 9);
+			gameArena = Validation.getPlayerNumberInRange(1, 9);
 			
 			//pick your move
 			System.out.println("Pick your move: ");
-			userMove = v1.getPlayerNumberInRange(1, 9);
+			userMove = Validation.getPlayerNumberInRange(1, 9);
 			// check if spot available method
 
 			// mark spot
@@ -89,9 +89,22 @@ public class MainApp {
 			// check for win
 
 			// increase counter
-
+			counterChild++;
 			// change player to playerO
-			
+			player = 'O';
+			//pick your move
+			System.out.println("Pick your move: ");
+			userMove = Validation.getPlayerNumberInRange(1, 9);
+			// check if spot available method
+
+			// mark spot
+
+			// check for win
+
+			// increase counter
+			counterChild++;
+			// change player to playerO
+			player = 'X';
 
 		}// end gameChoice switch
 	}
