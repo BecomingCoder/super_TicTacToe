@@ -2,6 +2,7 @@ package midTermProject;
 import java.util.*;
 
 
+
 public class Arena {
 
 	public static void printsArena(char[][] Arena) {
