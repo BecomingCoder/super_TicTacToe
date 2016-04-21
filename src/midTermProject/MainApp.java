@@ -3,7 +3,7 @@ package midTermProject;
 import java.util.Scanner;
 
 public class MainApp {
-	static char [][] childArray = { {' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
+	public static char [][] childArray = { {' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
 	static int [][] positionArray = { {1,2,3},{4,5,6},{7,8,9}};
 	static char [][] mainBoardArray = { {' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
 	public static void main(String[] args) {
@@ -26,6 +26,7 @@ public class MainApp {
 		//choose game play type
 		System.out.print("Enter 1. To battle me! or 2. For 2 player: ");
 		gameChoice = v1.getValidNumberInRange(1,2);
+		
 		
 		
 		//switch for game type choice 
