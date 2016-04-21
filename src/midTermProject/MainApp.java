@@ -3,10 +3,12 @@ package midTermProject;
 import java.util.Scanner;
 
 public class MainApp {
+
 	public static char[][] childArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 	static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 
+	
 	public static void main(String[] args) {
 		// set class variables
 		Validation v1 = new Validation();
@@ -29,12 +31,14 @@ public class MainApp {
 
 		// choose game play type
 		System.out.print("Enter 1. To battle me! or 2. For 2 player: ");
+
 		gameChoice = v1.getValidNumberInRange(1, 2);
 
 		// switch for game type choice
 		switch (gameChoice) {
 
 		case 1: // vs PC player
+
 			
 			//while loop for main board
 			while (counterMain <= 9) {
@@ -69,6 +73,25 @@ public class MainApp {
 			break;
 
 		case 2: // 2 player game
+			//directions player X goes first
+			System.out.println("Player X goes first"); 
+			// pick board to play on
+			System.out.println("Choose your arena");
+			gameArena = v1.getPlayerNumberInRange(1, 9);
+			
+			//pick your move
+			System.out.println("Pick your move: ");
+			userMove = v1.getPlayerNumberInRange(1, 9);
+			// check if spot available method
+
+			// mark spot
+
+			// check for win
+
+			// increase counter
+
+			// change player to playerO
+			
 
 		}// end gameChoice switch
 	}
