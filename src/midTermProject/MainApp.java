@@ -8,7 +8,8 @@ public class MainApp {
 	static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 	public static char player = 'X';
-	
+	public static boolean play = true;
+
 	public static void main(String[] args) {
 		// set class variables
 		Arena a1 = new Arena();
@@ -18,9 +19,9 @@ public class MainApp {
 		Scanner input = new Scanner(System.in);
 
 		// variables
-		int gameChoice = 0;
+		int gameChoice = '0';
 		int gameArena = 0;
-		int userMove = 0;
+		int userMove = '0';
 		int counterChild = 0;
 		int counterMain = 0;
 
@@ -30,20 +31,19 @@ public class MainApp {
 		// choose game play type
 		System.out.print("Enter 1. To battle me! or 2. For 2 player: ");
 
-		gameChoice = Validation.getValidNumberInRange(1, 2);
+		gameChoice = Validation.getPlayerNumberInRange(1, 2);
 
 		// switch for game type choice
 		switch (gameChoice) {
 
 		case 1: // vs PC player
 
-			
-			//while loop for main board
+			// while loop for main board
 			while (counterMain <= 9) {
 				// pick board to play on
 				System.out.println("Choose your arena");
-				gameArena = Validation.getPlayerNumberInRange(1, 9);
-				//while loop for child game
+				gameArena = Validation.getValidNumberInRange(1, 9);
+						// while loop for child game
 				while (counterChild <= 9) {
 					// player picks move
 					System.out.println("Pick your move: ");
@@ -54,17 +54,17 @@ public class MainApp {
 					// mark spot
 
 					// check for win
-					
+					GregAllDayEveryday.checkWin();
 					// increase counter
 					counterChild++;
 					// change player to playerO
 					player = 'O';
 					// get PC move +++++ put while loop that runs while PlayerO
-					while (player == 'O'){
-					s1.getPCmove();
+					while (player == 'O') {
+						s1.getPCmove();
 					}
 					// check for win
-
+					GregAllDayEveryday.checkWin();
 					// increase counter
 					counterChild++;
 				} // end countChild while
@@ -73,34 +73,34 @@ public class MainApp {
 			break;
 
 		case 2: // 2 player game
-			//directions player X goes first
-			System.out.println("Player X goes first"); 
+			// directions player X goes first
+			System.out.println("Player X goes first");
 			// pick board to play on
 			System.out.println("Choose your arena");
 			gameArena = Validation.getPlayerNumberInRange(1, 9);
-			
-			//pick your move
+
+			// pick your move
 			System.out.println("Pick your move: ");
 			userMove = Validation.getPlayerNumberInRange(1, 9);
 			// check if spot available method
-
+			
 			// mark spot
 
 			// check for win
-
+			GregAllDayEveryday.checkWin();
 			// increase counter
 			counterChild++;
 			// change player to playerO
 			player = 'O';
-			//pick your move
+			// pick your move
 			System.out.println("Pick your move: ");
 			userMove = Validation.getPlayerNumberInRange(1, 9);
 			// check if spot available method
-
+			
 			// mark spot
 
 			// check for win
-
+			GregAllDayEveryday.checkWin();
 			// increase counter
 			counterChild++;
 			// change player to playerO
