@@ -46,6 +46,7 @@ public class SaresaAISkynet {
 		temp= ((MainApp.childArray[0][2])=='X' && (MainApp.childArray[1][2]) =='X') ? '9':'0';
 		temp= ((MainApp.childArray[1][2])=='X' && (MainApp.childArray[2][2]) =='X') ? '3':'0';
 		temp= ((MainApp.childArray[0][2])=='X' && (MainApp.childArray[2][2]) =='X') ? '6':'0';
+		temp= ((MainApp.childArray[0][0])=='X' && (MainApp.childArray[0][2]) =='X') ? '2':'0';
 		return temp;
 	}
 	public char getRandomMove(){

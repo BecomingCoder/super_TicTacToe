@@ -27,7 +27,7 @@ public class MainApp {
 
 		// variables
 		
-		
+		boolean test=true;
 		
 
 		// title
@@ -49,7 +49,7 @@ public class MainApp {
 				System.out.println("Choose your arena");
 				gameArena = Validation.getValidNumberInRange(1, 9);
 						// while loop for child game
-				while (counterChild <=9) {
+				while (counterChild <= 8 && checkForWin()) {
 					// player picks move
 					System.out.println("Pick your move: ");
 					userMove = Validation.getValidNumberInRange(1, 9);
@@ -69,7 +69,7 @@ public class MainApp {
 					}
 					// mark spot
 					childArray[x][y] = 'X';
-					
+					test=checkForWin();
 					//print board
 					Arena.printsSmallArena();
 					// check for win
@@ -84,14 +84,22 @@ public class MainApp {
 						s1.getPCmove();
 					}
 					//print board
+					test=checkForWin();
 					Arena.printsSmallArena();
 					// increase counter
 					counterChild++;
 					// check for win
 					//GregAllDayEveryday.checkWinChild();
-
+					System.out.println(counterChild);
 				} // end countChild while
 				counterMain++;
+				if (counterChild<=8){
+					System.out.println("Player"+player+" wins!");
+				}else{
+				System.out.println("It's a Tie!! Wild Card gets the spot!!");
+				}
+				counterChild = 0;
+				Arena.resetBoard();
 			} // end countMain while
 			break;
 
@@ -131,5 +139,25 @@ public class MainApp {
 
 		}// end gameChoice switch
 	}
-
+	public static boolean checkForWin() {
+		// check for win
+		if (childArray[0][0] == childArray[0][1] && childArray[0][1] == childArray[0][2] && (childArray[0][0] == 'X' || childArray[0][0] == 'O'))
+			return false;
+		else if (childArray[1][0] == childArray[1][1] && childArray[1][1] == childArray[1][2] && (childArray[1][0] == 'X' || childArray[1][0] == 'O'))
+			return false;
+		else if (childArray[2][0] == childArray[2][1] && childArray[2][1] == childArray[2][2] && (childArray[2][0] == 'X' || childArray[2][0] == 'O'))
+			return false;
+		else if (childArray[0][0] == childArray[1][0] && childArray[1][0] == childArray[2][0] && (childArray[0][0] == 'X' || childArray[0][0] == 'O'))
+			return false;
+		else if (childArray[0][1] == childArray[1][1] && childArray[1][1] == childArray[2][1] && (childArray[0][1] == 'X' || childArray[0][1] == 'O'))
+			return false;
+		else if (childArray[0][2] == childArray[1][2] && childArray[1][2] == childArray[2][2] && (childArray[0][2] == 'X' || childArray[0][2] == 'O'))
+			return false;
+		else if (childArray[0][0] == childArray[1][1] && childArray[1][1] == childArray[2][2] && (childArray[0][0] == 'X' || childArray[0][0] == 'O'))
+			return false;
+		else if (childArray[0][2] == childArray[1][1] && childArray[1][1] == childArray[2][1] && (childArray[0][2] == 'X' || childArray[0][2] == 'O'))
+			return false;
+		else
+			return true;
+	}
 }
