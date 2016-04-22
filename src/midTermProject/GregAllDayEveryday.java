@@ -4,14 +4,14 @@ import java.util.*;
 
 public class GregAllDayEveryday {
 
-public static Scanner sc = new Scanner(System.in);
+	public static Scanner sc = new Scanner(System.in);
 	
 	//Check for win
 	public static void checkWinChild() {
 		// check if spot available method
-		for (int i = 0; i < MainApp.childArray.length; i++ ){
-			for (int j = 0; j < MainApp.childArray.length; j++){
-				if (MainApp.childArray[i][j] == MainApp.userMove){
+		for (int i = 0; i < MainApp.positionArray.length; i++ ){
+			for (int j = 0; j < MainApp.positionArray.length; j++){
+				if (MainApp.positionArray[i][j] == MainApp.userMove){
 					MainApp.x = i;
 					MainApp.y = j;
 				}

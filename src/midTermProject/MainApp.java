@@ -3,7 +3,8 @@ package midTermProject;
 import java.util.Scanner;
 
 public class MainApp {
-
+	// open scanner
+	public static Scanner input = new Scanner(System.in);
 	public static char[][] childArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 	static int[][] positionArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 	public static char[][] mainBoardArray = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
@@ -13,8 +14,8 @@ public class MainApp {
 	public static int counterMain = 0;
 	public static int x = 0;
 	public static int y = 0;
-	public static int userMove = '0';
-	public static int gameChoice = '0';
+	public static int userMove = 0;
+	public static int gameChoice = 0;
 	public static int gameArena = 0;
 
 	public static void main(String[] args) {
@@ -22,8 +23,7 @@ public class MainApp {
 		Arena a1 = new Arena();
 		SaresaAISkynet s1 = new SaresaAISkynet();
 
-		// open scanner
-		Scanner input = new Scanner(System.in);
+		
 
 		// variables
 		
@@ -52,7 +52,7 @@ public class MainApp {
 				while (play) {
 					// player picks move
 					System.out.println("Pick your move: ");
-					userMove = Validation.getPlayerNumberInRange(1, 9);
+					userMove = Validation.getValidNumberInRange(1, 9);
 
 					
 //					while (childArray[x][y]!=' '){
@@ -61,7 +61,7 @@ public class MainApp {
 //						userMove = Validation.getPlayerNumberInRange(1, 9);
 //					}
 					// mark spot
-					childArray[x][y] = 'X';
+					//childArray[x][y] = 'X';
 					
 					//print board
 					Arena.printsSmallArena();
@@ -71,7 +71,7 @@ public class MainApp {
 					counterChild++;
 					// change player to playerO
 					//player = 'O';
-					//System.out.println("My Turn!");
+					System.out.println("My Turn!");
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O') {
 						s1.getPCmove();
