@@ -49,28 +49,35 @@ public class MainApp {
 				System.out.println("Choose your arena");
 				gameArena = Validation.getValidNumberInRange(1, 9);
 						// while loop for child game
-				while (play) {
+				while (counterChild <=9) {
 					// player picks move
 					System.out.println("Pick your move: ");
 					userMove = Validation.getValidNumberInRange(1, 9);
-
+					for (int i = 0; i < MainApp.positionArray.length; i++ ){
+						for (int j = 0; j < MainApp.positionArray.length; j++){
+							if (MainApp.positionArray[i][j] == MainApp.userMove){
+								MainApp.x = i;
+								MainApp.y = j;
+							}
+						}//end j for loop
+					}//end i for loop
 					
-//					while (childArray[x][y]!=' '){
-//						System.out.println("You must pick a open spot.");
-//						System.out.println("Pick your move: ");
-//						userMove = Validation.getPlayerNumberInRange(1, 9);
-//					}
+					while (childArray[x][y]!=' '){
+						System.out.println("You must pick a open spot.");
+						System.out.println("Pick your move: ");
+						userMove = Validation.getPlayerNumberInRange(1, 9);
+					}
 					// mark spot
-					//childArray[x][y] = 'X';
+					childArray[x][y] = 'X';
 					
 					//print board
 					Arena.printsSmallArena();
 					// check for win
-					GregAllDayEveryday.checkWinChild();
+					//GregAllDayEveryday.checkWinChild();
 					// increase counter
 					counterChild++;
 					// change player to playerO
-					//player = 'O';
+					player = 'O';
 					System.out.println("My Turn!");
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O') {
@@ -81,7 +88,7 @@ public class MainApp {
 					// increase counter
 					counterChild++;
 					// check for win
-					GregAllDayEveryday.checkWinChild();
+					//GregAllDayEveryday.checkWinChild();
 
 				} // end countChild while
 				counterMain++;
