@@ -18,10 +18,10 @@ public class GregAllDayEveryday {
 			}//end j for loop
 		}//end i for loop
 		
-		while(MainApp.childArray[MainApp.x][MainApp.y]!= ' ') {
-			System.out.println("This space is taken.....try again!");
-			MainApp.userMove = MainApp.input.nextInt();
-			MainApp.input.nextLine(); 
+//		while(MainApp.childArray[MainApp.x][MainApp.y] != ' ') {
+//			System.out.println("This space is taken.....try again!");
+//			MainApp.userMove = MainApp.input.nextInt();
+//			MainApp.input.nextLine(); 
 			
 		
 		MainApp.childArray[MainApp.x][MainApp.y] = MainApp.player;
@@ -41,10 +41,10 @@ public class GregAllDayEveryday {
         //Check for draw by using a move counter and the max number of moves
         if (MainApp.counterChild >= 9){
             System.out.println("You both suck");
-            break;
+            
         }
         }
-	}
+	
 		
 		
 	
