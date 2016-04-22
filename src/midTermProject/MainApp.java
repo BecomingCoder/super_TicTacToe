@@ -40,6 +40,7 @@ public class MainApp {
 
 		// switch for game type choice
 		switch (gameChoice) {
+	
 
 		case 1: // vs PC player
 
