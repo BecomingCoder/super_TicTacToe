@@ -20,7 +20,7 @@ public class Validation {
 			
 			}
 		int x = sc.nextInt();
-		sc.nextLine();
+		
 		return x;
 	}
 	
