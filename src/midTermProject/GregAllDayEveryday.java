@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GregAllDayEveryday {
 
-	public static Scanner sc = new Scanner(System.in);
+
 	
 	//Check for win
 	public static void checkWinChild() {
@@ -20,8 +20,8 @@ public class GregAllDayEveryday {
 		
 		while(MainApp.childArray[MainApp.x][MainApp.y]!= ' ') {
 			System.out.println("This space is taken.....try again!");
-			MainApp.userMove = sc.nextInt();
-			sc.nextLine(); }
+			MainApp.userMove = MainApp.input.nextInt();
+			MainApp.input.nextLine(); 
 			
 		
 		MainApp.childArray[MainApp.x][MainApp.y] = MainApp.player;
@@ -41,9 +41,10 @@ public class GregAllDayEveryday {
         //Check for draw by using a move counter and the max number of moves
         if (MainApp.counterChild >= 9){
             System.out.println("You both suck");
-            
+            break;
         }
         }
+	}
 		
 		
 	

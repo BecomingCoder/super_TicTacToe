@@ -1,25 +1,24 @@
 package midTermProject;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Validation {
 	
 	
 	
 	
-	
-	public static Scanner sc = new Scanner(System.in);
+
 	
 	public static int readValidIntegerNoExp() {
 		while (true) {
 			
-			if (sc.hasNextInt())
+			if (MainApp.input.hasNextInt())
 				break;
-			sc.nextLine();
+			MainApp.input.nextLine();
 			System.out.println("Please enter numbers only!");
 			
 			}
-		int x = sc.nextInt();
+		int x = MainApp.input.nextInt();
 		
 		return x;
 	}
