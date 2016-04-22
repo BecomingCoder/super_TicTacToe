@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GregAllDayEveryday {
 
-	public static Scanner sc = new Scanner(System.in);
+public static Scanner sc = new Scanner(System.in);
 	
 	//Check for win
 	public static void checkWinChild() {

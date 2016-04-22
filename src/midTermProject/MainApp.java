@@ -71,7 +71,7 @@ public class MainApp {
 					counterChild++;
 					// change player to playerO
 					//player = 'O';
-					System.out.println("My Turn!");
+					//System.out.println("My Turn!");
 					// get PC move +++++ put while loop that runs while PlayerO
 					while (player == 'O') {
 						s1.getPCmove();
